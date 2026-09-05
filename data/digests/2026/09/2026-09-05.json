@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-05",
+  "commodities": {
+    "silver": {
+      "metal": "silver",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_tola": 6800,
+      "rate_10g": 5830,
+      "adjustment": -82,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR"
+    }
+  },
+  "currencies": {
+    "date": "2026-09-04",
+    "rates": {
+      "AED": 75.5287,
+      "EUR": 322.3817,
+      "GBP": 375.5341,
+      "SAR": 73.8783,
+      "USD": 277.4131
+    }
+  },
+  "prayer_times": {
+    "fajr": "04:15",
+    "sunrise": "05:39",
+    "dhuhr": "12:02",
+    "asr": "16:33",
+    "maghrib": "18:22",
+    "isha": "19:46"
+  },
+  "weather": {
+    "temperature": 26.0,
+    "apparent_temperature": 30.9,
+    "humidity": 86,
+    "weather_code": 51,
+    "description": "Light drizzle",
+    "wind_speed": 5.5,
+    "temperature_max": 28.9,
+    "temperature_min": 22.9,
+    "precipitation_probability": 49
+  },
+  "fuel": {
+    "petrol": {
+      "price": 345.87,
+      "unit": "litre",
+      "effective_date": "2026-09-05",
+      "change": -3.13
+    },
+    "hsd": {
+      "price": 378.05,
+      "unit": "litre",
+      "effective_date": "2026-09-05",
+      "change": 3.74
+    }
+  },
+  "psx": {
+    "date": "2026-09-04",
+    "stocks": {
+      "OGDC": {
+        "symbol": "OGDC",
+        "previous_close": 327.02,
+        "open": 327.0,
+        "high": 334.1,
+        "low": 327.0,
+        "close": 328.8,
+        "change": 1.78,
+        "change_percent": 0.54,
+        "volume": 8517799
+      },
+      "FFC": {
+        "symbol": "FFC",
+        "previous_close": 548.68,
+        "open": 550.0,
+        "high": 551.0,
+        "low": 547.0,
+        "close": 548.11,
+        "change": -0.57,
+        "change_percent": -0.1,
+        "volume": 269874
+      }
+    }
+  },
+  "errors": {
+    "gold": "Data unavailable"
+  }
+}
