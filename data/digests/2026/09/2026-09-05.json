@@ -1,6 +1,18 @@
 {
   "date": "2026-09-05",
   "commodities": {
+    "gold": {
+      "metal": "gold",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_24k_tola": 470200,
+      "adjustment": -1073,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR",
+      "rate_22k_tola": 431017,
+      "rate_21k_tola": 411425
+    },
     "silver": {
       "metal": "silver",
       "city": "Sialkot",
@@ -32,12 +44,12 @@
     "isha": "19:46"
   },
   "weather": {
-    "temperature": 26.0,
-    "apparent_temperature": 30.9,
-    "humidity": 86,
-    "weather_code": 51,
-    "description": "Light drizzle",
-    "wind_speed": 5.5,
+    "temperature": 27.8,
+    "apparent_temperature": 32.8,
+    "humidity": 79,
+    "weather_code": 3,
+    "description": "Overcast",
+    "wind_speed": 6.3,
     "temperature_max": 28.9,
     "temperature_min": 22.9,
     "precipitation_probability": 49
@@ -83,7 +95,5 @@
       }
     }
   },
-  "errors": {
-    "gold": "Data unavailable"
-  }
+  "errors": {}
 }
