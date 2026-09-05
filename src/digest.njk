@@ -26,30 +26,176 @@ permalink: "digest/{{ digest.date }}/index.html"
         <h1>Daily Digest</h1>
         <p class="digest-date">{{ digest.date }}</p>
 
+        {% if digest.commodities.silver %}
+        <section class="digest-section">
+          <h2>Silver</h2>
+          <p class="value">
+            Rs. {{ digest.commodities.silver.rate_tola }}
+          </p>
+          <p class="muted">Per tola</p>
+
+          <p>
+            Rs. {{ digest.commodities.silver.rate_10g }}
+            <span class="muted">per 10g</span>
+          </p>
+        </section>
+        {% endif %}
+
+        {% if digest.currencies %}
+        <section class="digest-section">
+          <h2>Currencies</h2>
+
+          {% if digest.currencies.rates.USD %}
+          <p>
+            <strong>USD</strong>
+            Rs. {{ digest.currencies.rates.USD }}
+          </p>
+          {% endif %}
+
+          {% if digest.currencies.rates.AED %}
+          <p>
+            <strong>AED</strong>
+            Rs. {{ digest.currencies.rates.AED }}
+          </p>
+          {% endif %}
+
+          {% if digest.currencies.rates.EUR %}
+          <p>
+            <strong>EUR</strong>
+            Rs. {{ digest.currencies.rates.EUR }}
+          </p>
+          {% endif %}
+
+          {% if digest.currencies.rates.GBP %}
+          <p>
+            <strong>GBP</strong>
+            Rs. {{ digest.currencies.rates.GBP }}
+          </p>
+          {% endif %}
+
+          {% if digest.currencies.rates.SAR %}
+          <p>
+            <strong>SAR</strong>
+            Rs. {{ digest.currencies.rates.SAR }}
+          </p>
+          {% endif %}
+
+          <p class="muted">Rates for {{ digest.currencies.date }}</p>
+        </section>
+        {% endif %}
+
+        {% if digest.prayer_times %}
+        <section class="digest-section">
+          <h2>Prayer Times</h2>
+
+          <p>Fajr: {{ digest.prayer_times.fajr }}</p>
+          <p>Sunrise: {{ digest.prayer_times.sunrise }}</p>
+          <p>Dhuhr: {{ digest.prayer_times.dhuhr }}</p>
+          <p>Asr: {{ digest.prayer_times.asr }}</p>
+          <p>Maghrib: {{ digest.prayer_times.maghrib }}</p>
+          <p>Isha: {{ digest.prayer_times.isha }}</p>
+        </section>
+        {% endif %}
+
+        {% if digest.weather %}
         <section class="digest-section">
           <h2>Weather</h2>
+
           <p class="value">
             {{ digest.weather.temperature }}°C
           </p>
+
           <p class="muted">
-            {{ digest.weather.condition }}
+            {{ digest.weather.description }}
           </p>
-        </section>
 
-        <section class="digest-section">
-          <h2>Gold</h2>
-          <p class="value">
-            Rs. {{ digest.gold["24k_per_tola"] }}
+          <p>
+            Feels like {{ digest.weather.apparent_temperature }}°C
           </p>
-          <p class="muted">24K per tola</p>
-        </section>
 
-        <section class="digest-section">
-          <h2>USD / PKR</h2>
-          <p class="value">
-            {{ digest.usd_pkr }}
+          <p>
+            High {{ digest.weather.temperature_max }}°C /
+            Low {{ digest.weather.temperature_min }}°C
+          </p>
+
+          <p>
+            Humidity {{ digest.weather.humidity }}% ·
+            Wind {{ digest.weather.wind_speed }}
+          </p>
+
+          <p>
+            Rain probability {{ digest.weather.precipitation_probability }}%
           </p>
         </section>
+        {% endif %}
+
+        {% if digest.fuel %}
+        <section class="digest-section">
+          <h2>Fuel</h2>
+
+          {% if digest.fuel.petrol %}
+          <p>
+            <strong>Petrol</strong>
+            Rs. {{ digest.fuel.petrol.price }}/litre
+            <span class="muted">
+              ({{ digest.fuel.petrol.change }})
+            </span>
+          </p>
+          {% endif %}
+
+          {% if digest.fuel.hsd %}
+          <p>
+            <strong>HSD</strong>
+            Rs. {{ digest.fuel.hsd.price }}/litre
+            <span class="muted">
+              ({{ digest.fuel.hsd.change }})
+            </span>
+          </p>
+          {% endif %}
+        </section>
+        {% endif %}
+
+        {% if digest.psx %}
+        <section class="digest-section">
+          <h2>PSX</h2>
+
+          {% for symbol, stock in digest.psx.stocks %}
+          <div>
+            <p>
+              <strong>{{ symbol }}</strong>
+              Rs. {{ stock.close }}
+              <span class="muted">
+                {{ stock.change }}
+                ({{ stock.change_percent }}%)
+              </span>
+            </p>
+
+            <p class="muted">
+              Open {{ stock.open }} ·
+              High {{ stock.high }} ·
+              Low {{ stock.low }} ·
+              Volume {{ stock.volume }}
+            </p>
+          </div>
+          {% endfor %}
+
+          <p class="muted">Market data for {{ digest.psx.date }}</p>
+        </section>
+        {% endif %}
+
+        {% if digest.errors %}
+        <section class="digest-section">
+          <h2>Unavailable</h2>
+
+          {% for section, message in digest.errors %}
+          <p>
+            <strong>{{ section | capitalize }}</strong>:
+            {{ message }}
+          </p>
+          {% endfor %}
+        </section>
+        {% endif %}
+
       </article>
     </main>
 
