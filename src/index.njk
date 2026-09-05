@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <title>Daily Digest Archive</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -20,7 +21,7 @@
       <div class="archive-list">
         {% for digest in digests %}
           <a class="archive-card" href="/digest/{{ digest.date }}/">
-            <span class="archive-date">{{ digest.date }}</span>
+            <span class="archive-date">{{ digest.date | formatDate }}</span>
             <span class="archive-arrow">→</span>
           </a>
         {% endfor %}
