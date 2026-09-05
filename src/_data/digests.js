@@ -3,15 +3,26 @@ const path = require("path");
 
 const dataDir = path.join(__dirname, "../../data/digests");
 
-module.exports = function () {
-  const files = fs
-    .readdirSync(dataDir)
-    .filter(file => file.endsWith(".json"))
-    .sort()
-    .reverse();
+function findJsonFiles(dir) {
+  return fs
+    .readdirSync(dir, { withFileTypes: true })
+    .flatMap(entry => {
+      const fullPath = path.join(dir, entry.name);
 
-  return files.map(file => {
-    const filePath = path.join(dataDir, file);
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
-  });
+      if (entry.isDirectory()) {
+        return findJsonFiles(fullPath);
+      }
+
+      return entry.isFile() && entry.name.endsWith(".json")
+        ? [fullPath]
+        : [];
+    });
+}
+
+module.exports = function () {
+  const files = findJsonFiles(dataDir).sort().reverse();
+
+  return files.map(filePath =>
+    JSON.parse(fs.readFileSync(filePath, "utf8"))
+  );
 };
