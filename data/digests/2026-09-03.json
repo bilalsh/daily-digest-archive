@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-03",
+  "weather": {
+    "temperature": 31,
+    "condition": "Sunny"
+  },
+  "gold": {
+    "24k_per_tola": 387500
+  },
+  "usd_pkr": 281.25
+}

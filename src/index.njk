@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Digest Archive</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Daily Digest</h1>
+      <p>A historical archive of the daily briefing.</p>
+    </header>
+
+    <main>
+      <h2 class="section-title">Recent Digests</h2>
+
+      <div class="archive-list">
+        {% for digest in digests %}
+          <a class="archive-card" href="/digest/{{ digest.date }}/">
+            <span class="archive-date">{{ digest.date }}</span>
+            <span class="archive-arrow">→</span>
+          </a>
+        {% endfor %}
+      </div>
+    </main>
+
+    <footer>
+      Daily Digest Archive
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+---
+pagination:
+  data: digests
+  size: 1
+  alias: digest
+permalink: "digest/{{ digest.date }}/index.html"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Digest — {{ digest.date }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <a class="back-link" href="/">← Back to archive</a>
+    </header>
+
+    <main>
+      <article class="digest">
+        <h1>Daily Digest</h1>
+        <p class="digest-date">{{ digest.date }}</p>
+
+        <section class="digest-section">
+          <h2>Weather</h2>
+          <p class="value">
+            {{ digest.weather.temperature }}°C
+          </p>
+          <p class="muted">
+            {{ digest.weather.condition }}
+          </p>
+        </section>
+
+        <section class="digest-section">
+          <h2>Gold</h2>
+          <p class="value">
+            Rs. {{ digest.gold["24k_per_tola"] }}
+          </p>
+          <p class="muted">24K per tola</p>
+        </section>
+
+        <section class="digest-section">
+          <h2>USD / PKR</h2>
+          <p class="value">
+            {{ digest.usd_pkr }}
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      Daily Digest Archive
+    </footer>
+  </div>
+
+</body>
+</html>
