@@ -44,15 +44,17 @@
     "isha": "19:44"
   },
   "weather": {
-    "temperature": 30.2,
-    "apparent_temperature": 35.3,
-    "humidity": 67,
-    "weather_code": 0,
-    "description": "Clear sky",
-    "wind_speed": 4.0,
-    "temperature_max": 30.5,
+    "summary": "Mostly sunny",
+    "primary_condition": "Mostly sunny",
+    "significant_weather": null,
+    "temperature_max": 29.7,
     "temperature_min": 23.0,
-    "precipitation_probability": 96
+    "apparent_temperature_max": 34.1,
+    "humidity": 80,
+    "wind_speed_max": 10.9,
+    "precipitation_sum": 14.2,
+    "sunrise": "05:39",
+    "sunset": "18:20"
   },
   "fuel": {
     "petrol": {

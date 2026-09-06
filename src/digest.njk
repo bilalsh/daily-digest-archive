@@ -28,51 +28,63 @@ permalink: "digest/{{ digest.date }}/index.html"
 
     <main>
 
-      {% if digest.weather %}
-      <section class="digest-card weather-card">
-        <div class="section-heading">
-          <h2>Weather</h2>
+    {% if digest.weather %}
+    <section class="digest-card weather-card">
+      <div class="section-heading">
+        <h2>Weather</h2>
+      </div>
+
+      <div class="weather-main">
+        <div class="weather-temperature">
+          {{ digest.weather.temperature_min }}° → {{ digest.weather.temperature_max }}°
         </div>
 
-        <div class="weather-main">
-          <div class="weather-temperature">
-            {{ digest.weather.temperature }}°C
-          </div>
+        <div class="weather-condition">
+          <strong>{{ digest.weather.summary }}</strong>
+          <span>Feels like up to {{ digest.weather.apparent_temperature_max }}°C</span>
+        </div>
+      </div>
 
-          <div class="weather-condition">
-            <strong>{{ digest.weather.description }}</strong>
-            <span>Feels like {{ digest.weather.apparent_temperature }}°C</span>
-          </div>
+      <div class="weather-details">
+        {% if digest.weather.significant_weather %}
+        <div>
+          <span class="detail-label">
+            {{ digest.weather.significant_weather.type | capitalize }}
+          </span>
+          <strong>
+            {{ digest.weather.significant_weather.period | capitalize }}
+            {{ digest.weather.significant_weather.probability }}%
+          </strong>
+        </div>
+        {% endif %}
+
+        <div>
+          <span class="detail-label">Humidity</span>
+          <strong>{{ digest.weather.humidity }}%</strong>
         </div>
 
-        <div class="weather-details">
-          <div>
-            <span class="detail-label">High</span>
-            <strong>{{ digest.weather.temperature_max }}°</strong>
-          </div>
-
-          <div>
-            <span class="detail-label">Low</span>
-            <strong>{{ digest.weather.temperature_min }}°</strong>
-          </div>
-
-          <div>
-            <span class="detail-label">Rain</span>
-            <strong>{{ digest.weather.precipitation_probability }}%</strong>
-          </div>
-
-          <div>
-            <span class="detail-label">Humidity</span>
-            <strong>{{ digest.weather.humidity }}%</strong>
-          </div>
-
-          <div>
-            <span class="detail-label">Wind</span>
-            <strong>{{ digest.weather.wind_speed }}</strong>
-          </div>
+        <div>
+          <span class="detail-label">Wind</span>
+          <strong>{{ digest.weather.wind_speed_max }} km/h</strong>
         </div>
-      </section>
-      {% endif %}
+
+        <div>
+          <span class="detail-label">Rain</span>
+          <strong>{{ digest.weather.precipitation_sum }} mm</strong>
+        </div>
+
+        <div>
+          <span class="detail-label">Sunrise</span>
+          <strong>{{ digest.weather.sunrise }}</strong>
+        </div>
+
+        <div>
+          <span class="detail-label">Sunset</span>
+          <strong>{{ digest.weather.sunset }}</strong>
+        </div>
+      </div>
+    </section>
+    {% endif %}
 
 
       {# Prayer Times #}
