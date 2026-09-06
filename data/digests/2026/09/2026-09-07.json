@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-07",
+  "commodities": {
+    "gold": {
+      "metal": "gold",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_24k_tola": 470000,
+      "adjustment": -1083,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR",
+      "rate_22k_tola": 430833,
+      "rate_21k_tola": 411250
+    },
+    "silver": {
+      "metal": "silver",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_tola": 6800,
+      "rate_10g": 5830,
+      "adjustment": -93,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR"
+    }
+  },
+  "currencies": {
+    "date": "2026-09-04",
+    "rates": {
+      "AED": 75.5287,
+      "EUR": 322.3817,
+      "GBP": 375.5341,
+      "SAR": 73.8783,
+      "USD": 277.4131
+    }
+  },
+  "prayer_times": {
+    "fajr": "04:16",
+    "sunrise": "05:40",
+    "dhuhr": "12:01",
+    "asr": "16:32",
+    "maghrib": "18:20",
+    "isha": "19:44"
+  },
+  "weather": {
+    "summary": "Mostly sunny",
+    "primary_condition": "Mostly sunny",
+    "significant_weather": null,
+    "temperature_max": 32.2,
+    "temperature_min": 23.8,
+    "apparent_temperature_max": 37.8,
+    "humidity": 69,
+    "wind_speed_max": 7.2,
+    "precipitation_sum": 0.0,
+    "sunrise": "05:40",
+    "sunset": "18:19"
+  },
+  "fuel": {
+    "petrol": {
+      "price": 345.87,
+      "unit": "litre",
+      "effective_date": "2026-09-05",
+      "change": -3.13
+    },
+    "hsd": {
+      "price": 378.05,
+      "unit": "litre",
+      "effective_date": "2026-09-05",
+      "change": 3.74
+    }
+  },
+  "psx": null,
+  "errors": {
+    "psx": "Data unavailable"
+  }
+}
