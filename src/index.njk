@@ -3,34 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Daily Digest Archive</title>
+  <title>daily_digest.json — archive</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+  <span class="grid-gutter left" aria-hidden="true"></span>
+  <span class="grid-gutter right" aria-hidden="true"></span>
+
   <div class="container">
-    <header>
-      <h1>Daily Digest</h1>
-      <p>A historical archive of the daily briefing.</p>
+
+    <header class="masthead">
+      <div class="badge"><span class="pulse"></span>live · updated daily</div>
+      <h1>daily<span class="accent-char">_</span>digest.json</h1>
+      <p class="tagline">Gold, currency, fuel, PSX and prayer times — one JSON file, rendered fresh every day.</p>
     </header>
 
     <main>
-      <h2 class="section-title">Recent Digests</h2>
+      <section class="digest-card">
+        <div class="section-heading">
+          <h2>archive</h2>
+          <span class="section-meta">{{ digests | length }} entries</span>
+        </div>
 
-      <div class="archive-list">
-        {% for digest in digests %}
-          <a class="archive-card" href="/digest/{{ digest.date }}/">
-            <span class="archive-date">{{ digest.date | formatDate }}</span>
-            <span class="archive-arrow">→</span>
-          </a>
-        {% endfor %}
-      </div>
+        <div class="archive-list">
+          {% for digest in digests %}
+            <a class="archive-card" href="/digest/{{ digest.date }}/">
+              <span class="archive-date">{{ digest.date | formatDate }}</span>
+              <span class="archive-arrow">→</span>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
     </main>
 
     <footer>
-      Daily Digest Archive
+      built with eleventy · deployed on cloudflare pages · <a href="https://github.com/bilalsh/daily-digest-archive">view source →</a>
     </footer>
+
   </div>
 
 </body>

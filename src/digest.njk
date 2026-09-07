@@ -11,173 +11,107 @@ permalink: "digest/{{ digest.date }}/index.html"
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Daily Digest — {{ digest.date | formatDate }}</title>
+  <title>daily_digest.json — {{ digest.date | formatDate }}</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+  <span class="grid-gutter left" aria-hidden="true"></span>
+  <span class="grid-gutter right" aria-hidden="true"></span>
+
   <div class="container">
 
-    <header class="digest-header">
-      <a class="back-link" href="/">← Back to archive</a>
-
-      <h1>Daily Digest</h1>
-      <p class="digest-date">{{ digest.date | formatDate }}</p>
+    <header class="masthead">
+      <a class="back-link" href="/">&lt; back-to-archive</a>
+      <div class="badge"><span class="pulse"></span>live · updated daily</div>
+      <h1>daily<span class="accent-char">_</span>digest.json</h1>
+      <p class="digest-date">rendered {{ digest.date | formatDate }}</p>
     </header>
 
     <main>
 
-    {% if digest.weather %}
-    <section class="digest-card weather-card">
-      <div class="section-heading">
-        <h2>Weather</h2>
-      </div>
-
-      <div class="weather-main">
-        <div class="weather-temperature">
-          {{ digest.weather.temperature_min }}° → {{ digest.weather.temperature_max }}°
-        </div>
-
-        <div class="weather-condition">
-          <strong>{{ digest.weather.summary }}</strong>
-          <span>Feels like up to {{ digest.weather.apparent_temperature_max }}°C</span>
-        </div>
-      </div>
-
-      <div class="weather-details">
-        {% if digest.weather.significant_weather %}
-        <div>
-          <span class="detail-label">
-            {{ digest.weather.significant_weather.type | capitalize }}
-          </span>
-          <strong>
-            {{ digest.weather.significant_weather.period | capitalize }}
-            {{ digest.weather.significant_weather.probability }}%
-          </strong>
-        </div>
-        {% endif %}
-
-        <div>
-          <span class="detail-label">Humidity</span>
-          <strong>{{ digest.weather.humidity }}%</strong>
-        </div>
-
-        <div>
-          <span class="detail-label">Wind</span>
-          <strong>{{ digest.weather.wind_speed_max }} km/h</strong>
-        </div>
-
-        <div>
-          <span class="detail-label">Rain</span>
-          <strong>{{ digest.weather.precipitation_sum }} mm</strong>
-        </div>
-
-        <div>
-          <span class="detail-label">Sunrise</span>
-          <strong>{{ digest.weather.sunrise }}</strong>
-        </div>
-
-        <div>
-          <span class="detail-label">Sunset</span>
-          <strong>{{ digest.weather.sunset }}</strong>
-        </div>
-      </div>
-    </section>
-    {% endif %}
-
-
-      {# Prayer Times #}
-
-      {% if digest.prayer_times %}
-      <section class="digest-card prayer-card">
-        <div class="section-heading">
-          <h2>Prayer Times</h2>
-        </div>
-
-        <div class="prayer-grid">
+      {% if digest.weather %}
+      <section class="hero-weather" id="weather">
+        <p class="hero-comment">weather.today()</p>
+        <div class="hero-top">
           <div>
-            <span>Fajr</span>
-            <strong>{{ digest.prayer_times.fajr }}</strong>
+            <div class="hero-headline">
+              <span class="hero-icon">{{ digest.weather.summary | weatherIcon }}</span>
+              <p class="hero-condition">{{ digest.weather.summary }}</p>
+            </div>
+            <p class="hero-sub">feels_like_max: {{ digest.weather.apparent_temperature_max }}°C</p>
           </div>
+          <div class="hero-temp">
+            {{ digest.weather.temperature_max }}°<small> / {{ digest.weather.temperature_min }}°</small>
+          </div>
+        </div>
 
+        <div class="hero-details">
+          {% if digest.weather.significant_weather %}
           <div>
-            <span>Sunrise</span>
-            <strong>{{ digest.prayer_times.sunrise }}</strong>
+            <span class="detail-label">{{ digest.weather.significant_weather.type }}</span>
+            <strong>
+              {{ digest.weather.significant_weather.period }}
+              {{ digest.weather.significant_weather.probability }}%
+            </strong>
           </div>
-
-          <div>
-            <span>Dhuhr</span>
-            <strong>{{ digest.prayer_times.dhuhr }}</strong>
-          </div>
-
-          <div>
-            <span>Asr</span>
-            <strong>{{ digest.prayer_times.asr }}</strong>
-          </div>
-
-          <div>
-            <span>Maghrib</span>
-            <strong>{{ digest.prayer_times.maghrib }}</strong>
-          </div>
-
-          <div>
-            <span>Isha</span>
-            <strong>{{ digest.prayer_times.isha }}</strong>
-          </div>
+          {% endif %}
+          <div><span class="detail-label">humidity</span><strong>{{ digest.weather.humidity }}%</strong></div>
+          <div><span class="detail-label">wind</span><strong>{{ digest.weather.wind_speed_max }} km/h</strong></div>
+          <div><span class="detail-label">rain</span><strong>{{ digest.weather.precipitation_sum }} mm</strong></div>
+          <div><span class="detail-label">sunrise</span><strong>{{ digest.weather.sunrise }}</strong></div>
+          <div><span class="detail-label">sunset</span><strong>{{ digest.weather.sunset }}</strong></div>
         </div>
       </section>
       {% endif %}
 
 
-      {# Gold + Silver #}
+      {% if digest.prayer_times %}
+      <section class="digest-card" id="prayer">
+        <div class="section-heading">
+          <h2>prayer_times</h2>
+        </div>
+        <div class="prayer-strip">
+          <div><span class="label">fajr</span><strong>{{ digest.prayer_times.fajr }}</strong></div>
+          <div><span class="label">sunrise</span><strong>{{ digest.prayer_times.sunrise }}</strong></div>
+          <div><span class="label">dhuhr</span><strong>{{ digest.prayer_times.dhuhr }}</strong></div>
+          <div><span class="label">asr</span><strong>{{ digest.prayer_times.asr }}</strong></div>
+          <div><span class="label">maghrib</span><strong>{{ digest.prayer_times.maghrib }}</strong></div>
+          <div><span class="label">isha</span><strong>{{ digest.prayer_times.isha }}</strong></div>
+        </div>
+      </section>
+      {% endif %}
+
 
       {% if digest.commodities.gold or digest.commodities.silver %}
-      <div class="digest-grid">
+      <div class="digest-grid" id="metals">
 
         {% if digest.commodities.gold %}
-        <section class="digest-card">
-          <div class="section-heading">
-            <h2>Gold</h2>
-            <span class="section-meta">{{ digest.commodities.gold.city }}</span>
+        <section class="digest-card ticker-card">
+          <div class="ticker-top">
+            <span class="ticker-name">gold</span>
+            <span class="ticker-place">{{ digest.commodities.gold.city | lower }}</span>
           </div>
-
-          <p class="large-value">
-            Rs. {{ digest.commodities.gold.rate_24k_tola }}
-          </p>
-          <p class="value-label">24K per tola</p>
-
+          <p class="large-value">Rs. {{ digest.commodities.gold.rate_24k_tola | formatNumber }}</p>
+          <p class="value-label">24k / tola</p>
           <div class="metal-rates">
-            <div>
-              <span>22K</span>
-              <strong>Rs. {{ digest.commodities.gold.rate_22k_tola }}</strong>
-            </div>
-
-            <div>
-              <span>21K</span>
-              <strong>Rs. {{ digest.commodities.gold.rate_21k_tola }}</strong>
-            </div>
+            <div><span>22k</span><strong>Rs. {{ digest.commodities.gold.rate_22k_tola | formatNumber }}</strong></div>
+            <div><span>21k</span><strong>Rs. {{ digest.commodities.gold.rate_21k_tola | formatNumber }}</strong></div>
           </div>
         </section>
         {% endif %}
 
-
         {% if digest.commodities.silver %}
-        <section class="digest-card">
-          <div class="section-heading">
-            <h2>Silver</h2>
-            <span class="section-meta">{{ digest.commodities.silver.city }}</span>
+        <section class="digest-card ticker-card">
+          <div class="ticker-top">
+            <span class="ticker-name">silver</span>
+            <span class="ticker-place">{{ digest.commodities.silver.city | lower }}</span>
           </div>
-
-          <p class="large-value">
-            Rs. {{ digest.commodities.silver.rate_tola }}
-          </p>
+          <p class="large-value">Rs. {{ digest.commodities.silver.rate_tola | formatNumber }}</p>
           <p class="value-label">per tola</p>
-
-          <p class="secondary-value">
-            Rs. {{ digest.commodities.silver.rate_10g }}
-            <span>per 10g</span>
-          </p>
+          <div class="metal-rates">
+            <div><span>10g</span><strong>Rs. {{ digest.commodities.silver.rate_10g | formatNumber }}</strong></div>
+          </div>
         </section>
         {% endif %}
 
@@ -185,67 +119,59 @@ permalink: "digest/{{ digest.date }}/index.html"
       {% endif %}
 
 
-      {# Currencies + Fuel #}
-
       {% if digest.currencies or digest.fuel %}
       <div class="digest-grid">
 
         {% if digest.currencies %}
-        <section class="digest-card">
+        <section class="digest-card" id="fx">
           <div class="section-heading">
-            <h2>Currencies</h2>
-            <span class="section-meta">{{ digest.currencies.date | formatDate }}</span>
+            <h2>fx_rates</h2>
+            <span class="section-meta">{{ digest.currencies.date | formatDateShort }}</span>
           </div>
-
           <div class="data-list">
             {% for code, rate in digest.currencies.rates %}
             <div class="data-row">
-              <strong>{{ code }}</strong>
-              <span>Rs. {{ rate }}</span>
+              <strong>{{ code | lower }}</strong>
+              <span>{{ rate | formatNumber }}</span>
             </div>
             {% endfor %}
           </div>
         </section>
         {% endif %}
 
-
         {% if digest.fuel %}
-        <section class="digest-card">
+        <section class="digest-card" id="fuel">
           <div class="section-heading">
-            <h2>Fuel</h2>
+            <h2>fuel_prices</h2>
           </div>
-
           <div class="data-list">
 
             {% if digest.fuel.petrol %}
             <div class="data-row">
               <div>
-                <strong>Petrol</strong>
-                <span class="row-meta">
-                  {{ digest.fuel.petrol.effective_date | formatDate }}
-                </span>
+                <strong>petrol</strong>
+                <span class="row-meta">{{ digest.fuel.petrol.effective_date | formatDateShort }}</span>
               </div>
-
               <div class="row-value">
-                <strong>Rs. {{ digest.fuel.petrol.price }}</strong>
-                <span class="change">{{ digest.fuel.petrol.change }}</span>
+                <strong>{{ digest.fuel.petrol.price | formatNumber }}</strong>
+                <span class="pill" data-positive="{{ digest.fuel.petrol.change > 0 }}" data-negative="{{ digest.fuel.petrol.change < 0 }}">
+                  {{ digest.fuel.petrol.change | formatSigned }}
+                </span>
               </div>
             </div>
             {% endif %}
 
-
             {% if digest.fuel.hsd %}
             <div class="data-row">
               <div>
-                <strong>HSD</strong>
-                <span class="row-meta">
-                  {{ digest.fuel.hsd.effective_date | formatDate }}
-                </span>
+                <strong>hsd</strong>
+                <span class="row-meta">{{ digest.fuel.hsd.effective_date | formatDateShort }}</span>
               </div>
-
               <div class="row-value">
-                <strong>Rs. {{ digest.fuel.hsd.price }}</strong>
-                <span class="change">{{ digest.fuel.hsd.change }}</span>
+                <strong>{{ digest.fuel.hsd.price | formatNumber }}</strong>
+                <span class="pill" data-positive="{{ digest.fuel.hsd.change > 0 }}" data-negative="{{ digest.fuel.hsd.change < 0 }}">
+                  {{ digest.fuel.hsd.change | formatSigned }}
+                </span>
               </div>
             </div>
             {% endif %}
@@ -258,29 +184,24 @@ permalink: "digest/{{ digest.date }}/index.html"
       {% endif %}
 
 
-
-      {# PSX #}
-
       {% if digest.psx %}
-      <section class="digest-card">
+      <section class="digest-card" id="psx">
         <div class="section-heading">
-          <h2>PSX</h2>
-          <span class="section-meta">{{ digest.psx.date | formatDate }}</span>
+          <h2>psx.stocks</h2>
+          <span class="section-meta">{{ digest.psx.date | formatDateShort }}</span>
         </div>
-
-        <div class="data-list">
+        <div class="stock-table">
           {% for symbol, stock in digest.psx.stocks %}
           <div class="stock-row">
-            <div>
+            <div class="stock-symbol">
               <strong>{{ symbol }}</strong>
-              <span class="row-meta">
-                Vol. {{ stock.volume }}
-              </span>
+              <span>vol {{ stock.volume | formatVolume }}</span>
             </div>
-
-            <div class="stock-price">
-              <strong>Rs. {{ stock.close }}</strong>
-              <span class="change">{{ stock.change_percent }}%</span>
+            <div class="stock-close">{{ stock.close | formatNumber }}</div>
+            <div class="stock-change">
+              <span class="pill" data-positive="{{ stock.change_percent > 0 }}" data-negative="{{ stock.change_percent < 0 }}">
+                {{ stock.change_percent | formatSigned }}%
+              </span>
             </div>
           </div>
           {% endfor %}
@@ -289,17 +210,14 @@ permalink: "digest/{{ digest.date }}/index.html"
       {% endif %}
 
 
-      {# Unavailable sections #}
-
       {% if digest.errors | length %}
       <section class="digest-card unavailable-card">
         <div class="section-heading">
-          <h2>Unavailable</h2>
+          <h2>unavailable</h2>
         </div>
-
         {% for section, message in digest.errors %}
         <p>
-          <strong>{{ section | capitalize }}</strong>
+          <strong>{{ section }}</strong>
           <span>{{ message }}</span>
         </p>
         {% endfor %}
@@ -309,7 +227,7 @@ permalink: "digest/{{ digest.date }}/index.html"
     </main>
 
     <footer>
-      Daily Digest Archive
+      built with eleventy · deployed on cloudflare pages · <a href="https://github.com/bilalsh/daily-digest-archive">view source →</a>
     </footer>
 
   </div>
