@@ -43,6 +43,12 @@
     "maghrib": "18:19",
     "isha": "19:43"
   },
+  "hijri": {
+    "day": 24,
+    "month_name": "Rabi' al-awwal",
+    "year": 1448,
+    "is_ramadan": false
+  },
   "weather": {
     "summary": "Mostly sunny. Rain possible in the afternoon",
     "primary_condition": "Mostly sunny",

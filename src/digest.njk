@@ -70,6 +70,11 @@ permalink: "digest/{{ digest.date }}/index.html"
       <section class="digest-card" id="prayer">
         <div class="section-heading">
           <h2>prayer_times</h2>
+          {% if digest.hijri %}
+          <span class="section-meta">
+            {{ digest.hijri.day }} {{ digest.hijri.month_name }} {{ digest.hijri.year }} AH
+          </span>
+          {% endif %}
         </div>
         <div class="prayer-strip">
           <div><span class="label">fajr</span><strong>{{ digest.prayer_times.fajr }}</strong></div>
