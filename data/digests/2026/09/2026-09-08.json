@@ -5,13 +5,13 @@
       "metal": "gold",
       "city": "Sialkot",
       "slug": "sialkot",
-      "rate_24k_tola": 469000,
-      "adjustment": -1219,
+      "rate_24k_tola": 466600,
+      "adjustment": -1144,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR",
-      "rate_22k_tola": 429917,
-      "rate_21k_tola": 410375
+      "rate_22k_tola": 427717,
+      "rate_21k_tola": 408275
     },
     "silver": {
       "metal": "silver",
@@ -19,7 +19,7 @@
       "slug": "sialkot",
       "rate_tola": 6800,
       "rate_10g": 5830,
-      "adjustment": -117,
+      "adjustment": -70,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR"
@@ -43,15 +43,21 @@
     "maghrib": "18:18",
     "isha": "19:41"
   },
+  "hijri": {
+    "day": 25,
+    "month_name": "Rabi' al-awwal",
+    "year": 1448,
+    "is_ramadan": false
+  },
   "weather": {
     "summary": "Mostly sunny",
     "primary_condition": "Mostly sunny",
     "significant_weather": null,
-    "temperature_max": 32.9,
-    "temperature_min": 24.3,
+    "temperature_max": 33.1,
+    "temperature_min": 25.0,
     "apparent_temperature_max": 38.3,
-    "humidity": 68,
-    "wind_speed_max": 9.4,
+    "humidity": 67,
+    "wind_speed_max": 9.7,
     "precipitation_sum": 0.0,
     "sunrise": "05:41",
     "sunset": "18:17"
