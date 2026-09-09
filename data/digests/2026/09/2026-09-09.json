@@ -5,13 +5,13 @@
       "metal": "gold",
       "city": "Sialkot",
       "slug": "sialkot",
-      "rate_24k_tola": 465000,
-      "adjustment": -1132,
+      "rate_24k_tola": 466800,
+      "adjustment": -1028,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR",
-      "rate_22k_tola": 426250,
-      "rate_21k_tola": 406875
+      "rate_22k_tola": 427900,
+      "rate_21k_tola": 408450
     },
     "silver": {
       "metal": "silver",
@@ -19,7 +19,7 @@
       "slug": "sialkot",
       "rate_tola": 6800,
       "rate_10g": 5830,
-      "adjustment": -82,
+      "adjustment": -93,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR"
@@ -50,23 +50,29 @@
     "is_ramadan": false
   },
   "weather": {
-    "summary": "Mostly sunny. Rain possible in the afternoon",
+    "summary": "Mostly sunny. Thunderstorms possible in the afternoon",
     "primary_condition": "Mostly sunny",
     "significant_weather": {
-      "type": "rain",
+      "type": "thunderstorm",
       "period": "afternoon",
-      "hour": 16,
-      "probability": 12,
-      "precipitation": 0.2
+      "hour": 15,
+      "probability": 25,
+      "precipitation": 1.6
     },
-    "temperature_max": 32.8,
-    "temperature_min": 25.6,
-    "apparent_temperature_max": 39.2,
+    "temperature_max": 33.6,
+    "temperature_min": 25.9,
+    "apparent_temperature_max": 40.0,
     "humidity": 71,
-    "wind_speed_max": 11.2,
-    "precipitation_sum": 0.3,
+    "wind_speed_max": 10.5,
+    "precipitation_sum": 3.2,
     "sunrise": "05:41",
-    "sunset": "18:16"
+    "sunset": "18:16",
+    "uv_index_max": 7.35,
+    "uv_category": "Very High",
+    "air_quality": {
+      "aqi": 192,
+      "category": "Unhealthy"
+    }
   },
   "fuel": {
     "petrol": {
