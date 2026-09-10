@@ -25,7 +25,7 @@ permalink: "digest/{{ digest.date }}/index.html"
       <a class="back-link" href="/">&lt; back-to-archive</a>
       <div class="badge"><span class="pulse"></span>live · updated daily</div>
       <h1>daily<span class="accent-char">_</span>digest.json</h1>
-      <p class="digest-date">rendered {{ digest.date | formatDate }}</p>
+      <p class="digest-date">{{ digest.date | formatDate }}</p>
     </header>
 
     <main>
@@ -59,6 +59,18 @@ permalink: "digest/{{ digest.date }}/index.html"
           <div><span class="detail-label">humidity</span><strong>{{ digest.weather.humidity }}%</strong></div>
           <div><span class="detail-label">wind</span><strong>{{ digest.weather.wind_speed_max }} km/h</strong></div>
           <div><span class="detail-label">rain</span><strong>{{ digest.weather.precipitation_sum }} mm</strong></div>
+          {% if digest.weather.uv_index_max %}
+          <div>
+            <span class="detail-label">uv index</span>
+            <strong>{{ digest.weather.uv_index_max }} <span class="detail-sub" data-severity="{{ 'high' if digest.weather.uv_category in ['High', 'Very High', 'Extreme'] else 'low' }}">{{ digest.weather.uv_category }}</span></strong>
+          </div>
+          {% endif %}
+          {% if digest.weather.air_quality %}
+          <div>
+            <span class="detail-label">air quality</span>
+            <strong>{{ digest.weather.air_quality.aqi }} <span class="detail-sub" data-severity="{{ 'high' if digest.weather.air_quality.category in ['Unhealthy for Sensitive Groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous'] else 'low' }}">{{ digest.weather.air_quality.category }}</span></strong>
+          </div>
+          {% endif %}
           <div><span class="detail-label">sunrise</span><strong>{{ digest.weather.sunrise }}</strong></div>
           <div><span class="detail-label">sunset</span><strong>{{ digest.weather.sunset }}</strong></div>
         </div>

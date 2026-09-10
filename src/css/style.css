@@ -180,6 +180,20 @@ a {
   font-size: 0.85rem;
 }
 
+.detail-sub {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.detail-sub[data-severity="high"] {
+  color: var(--negative);
+}
+
+.detail-sub[data-severity="low"] {
+  color: var(--positive);
+}
+
 /* Archive index */
 
 .archive-list {
