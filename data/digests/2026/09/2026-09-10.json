@@ -5,13 +5,13 @@
       "metal": "gold",
       "city": "Sialkot",
       "slug": "sialkot",
-      "rate_24k_tola": 469200,
-      "adjustment": -1089,
+      "rate_24k_tola": 468000,
+      "adjustment": -1218,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR",
-      "rate_22k_tola": 430100,
-      "rate_21k_tola": 410550
+      "rate_22k_tola": 429000,
+      "rate_21k_tola": 409500
     },
     "silver": {
       "metal": "silver",
@@ -19,7 +19,7 @@
       "slug": "sialkot",
       "rate_tola": 7000,
       "rate_10g": 6001,
-      "adjustment": -45,
+      "adjustment": -10,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR"
@@ -55,8 +55,8 @@
     "significant_weather": null,
     "temperature_max": 33.7,
     "temperature_min": 25.8,
-    "apparent_temperature_max": 39.2,
-    "humidity": 66,
+    "apparent_temperature_max": 39.5,
+    "humidity": 67,
     "wind_speed_max": 7.6,
     "precipitation_sum": 0.0,
     "sunrise": "05:42",
