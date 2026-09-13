@@ -50,21 +50,21 @@
     "is_ramadan": false
   },
   "weather": {
-    "summary": "Mostly sunny. Rain possible in the afternoon",
+    "summary": "Mostly sunny. Thunderstorms possible in the morning",
     "primary_condition": "Mostly sunny",
     "significant_weather": {
-      "type": "rain",
-      "period": "afternoon",
-      "hour": 14,
-      "probability": 20,
-      "precipitation": 0.2
+      "type": "thunderstorm",
+      "period": "morning",
+      "hour": 10,
+      "probability": 0,
+      "precipitation": 1.1
     },
-    "temperature_max": 34.1,
-    "temperature_min": 25.2,
-    "apparent_temperature_max": 39.2,
-    "humidity": 63,
-    "wind_speed_max": 9.1,
-    "precipitation_sum": 1.0,
+    "temperature_max": 33.5,
+    "temperature_min": 25.9,
+    "apparent_temperature_max": 39.1,
+    "humidity": 65,
+    "wind_speed_max": 7.7,
+    "precipitation_sum": 5.4,
     "sunrise": "05:44",
     "sunset": "18:10",
     "uv_index_max": 7.2,
@@ -92,8 +92,8 @@
     "date": "2026-09-11",
     "kse100": {
       "level": 170511.85,
-      "change": 1646.8099999999977,
-      "change_percent": 0.9752225801148642,
+      "change": 1646.81,
+      "change_percent": 0.98,
       "date": "2026-09-11"
     },
     "stocks": {
