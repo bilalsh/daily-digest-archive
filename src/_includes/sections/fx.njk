@@ -1,0 +1,15 @@
+{% import "macros/ui.njk" as ui %}
+
+{% if digest.currencies %}
+{% call ui.card("fx") %}
+
+  {{ ui.heading("fx_rates", digest.currencies.date | formatDateShort) }}
+
+  <div class="flex flex-col divide-y divide-zinc-800">
+    {% for code, rate in digest.currencies.rates %}
+      {{ ui.dataRow(code | lower, rate | formatNumber) }}
+    {% endfor %}
+  </div>
+
+{% endcall %}
+{% endif %}

@@ -1,0 +1,20 @@
+{% import "macros/ui.njk" as ui %}
+
+{% if digest.fuel %}
+{% call ui.card("fuel") %}
+
+  {{ ui.heading("fuel_prices") }}
+
+  <div class="flex flex-col divide-y divide-zinc-800">
+    {% for name, item in digest.fuel %}
+      {{ ui.dataRow(
+        name,
+        item.price | formatNumber,
+        item.effective_date | formatDateShort,
+        item.change
+      ) }}
+    {% endfor %}
+  </div>
+
+{% endcall %}
+{% endif %}

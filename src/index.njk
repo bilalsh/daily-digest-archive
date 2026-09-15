@@ -1,47 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>daily_digest.json — archive</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+---
+layout: layouts/base.njk
+title: "daily_digest.json — archive"
+eleventyComputed:
+  subtitle: "{{ site.tagline }}"
+---
 
-  <span class="grid-gutter left" aria-hidden="true"></span>
-  <span class="grid-gutter right" aria-hidden="true"></span>
+{% import "macros/ui.njk" as ui %}
 
-  <div class="container">
+{% set entryCount = digests | length %}
 
-    <header class="masthead">
-      <div class="badge"><span class="pulse"></span>live · updated daily</div>
-      <h1>daily<span class="accent-char">_</span>digest.json</h1>
-      <p class="tagline">Gold, currency, fuel, PSX and prayer times — one JSON file, rendered fresh every day.</p>
-    </header>
+{% call ui.card() %}
 
-    <main>
-      <section class="digest-card">
-        <div class="section-heading">
-          <h2>archive</h2>
-          <span class="section-meta">{{ digests | length }} entries</span>
-        </div>
+  {{ ui.heading("archive", entryCount + " entries") }}
 
-        <div class="archive-list">
-          {% for digest in digests %}
-            <a class="archive-card" href="/digest/{{ digest.date }}/">
-              <span class="archive-date">{{ digest.date | formatDate }}</span>
-              <span class="archive-arrow">→</span>
-            </a>
-          {% endfor %}
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      built with eleventy · deployed on cloudflare pages · <a href="https://github.com/bilalsh/daily-digest-archive">view source →</a>
-    </footer>
-
+  <div class="grid gap-2">
+    {% for digest in digests %}
+    <a href="/digest/{{ digest.date }}/"
+       class="flex items-center justify-between gap-4 rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-4 transition-colors hover:border-teal-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300">
+      <span class="text-sm font-semibold">{{ digest.date | formatDate }}</span>
+      <span class="text-teal-300">&rarr;</span>
+    </a>
+    {% endfor %}
   </div>
 
-</body>
-</html>
+{% endcall %}

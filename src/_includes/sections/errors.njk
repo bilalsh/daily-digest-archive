@@ -1,0 +1,16 @@
+{% import "macros/ui.njk" as ui %}
+
+{% if digest.errors | length %}
+<section class="px-1 py-3">
+  {{ ui.heading("unavailable") }}
+
+  <dl class="flex flex-col gap-2 text-sm">
+    {% for section, message in digest.errors %}
+    <div class="flex gap-2">
+      <dt class="font-semibold">{{ section }}</dt>
+      <dd class="text-zinc-500">{{ message }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+{% endif %}

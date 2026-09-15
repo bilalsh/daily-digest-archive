@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Templates live outside this file's folder, so point the scanner at them. */
+@source "../**/*.njk";
+
+/* The only theme override: the mono stack that carries the whole design.
+   Every colour, size and spacing value in the templates comes from
+   Tailwind's default scale (zinc / teal / green / rose). */
+@theme {
+  --font-mono:
+    "JetBrains Mono", "Fira Code", "SF Mono", ui-monospace, Menlo, monospace;
+}
+
+/* Page-wide dot grid behind the content. Colour comes from the palette
+   (zinc-500 at 12%, the same mix Tailwind's own `/12` modifier produces)
+   rather than a hard-coded grey, so it tracks the theme. */
+@utility bg-dot-grid {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in oklab, var(--color-zinc-500) 12%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 12px 12px;
+}
+
+/* The diagonal hatch on the gutter rails has no utility equivalent — it is
+   the one piece of hand-written CSS left, registered as a utility so it
+   composes and variants like `md:bg-hatch` work. */
+@utility bg-hatch {
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--color-zinc-800) 0,
+    var(--color-zinc-800) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 10px 10px;
+}

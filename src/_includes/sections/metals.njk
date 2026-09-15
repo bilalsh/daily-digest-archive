@@ -1,0 +1,35 @@
+{% import "macros/ui.njk" as ui %}
+
+{% set gold = digest.commodities.gold %}
+{% set silver = digest.commodities.silver %}
+
+{% if gold or silver %}
+<div id="metals" class="grid scroll-mt-4 gap-4 md:grid-cols-2">
+
+  {% if gold %}
+    {{ ui.ticker(
+      "gold",
+      gold.city,
+      gold.rate_24k_tola | formatRupees,
+      "24k / tola",
+      [
+        { label: "22k", value: gold.rate_22k_tola | formatRupees },
+        { label: "21k", value: gold.rate_21k_tola | formatRupees }
+      ]
+    ) }}
+  {% endif %}
+
+  {% if silver %}
+    {{ ui.ticker(
+      "silver",
+      silver.city,
+      silver.rate_tola | formatRupees,
+      "per tola",
+      [
+        { label: "10g", value: silver.rate_10g | formatRupees }
+      ]
+    ) }}
+  {% endif %}
+
+</div>
+{% endif %}

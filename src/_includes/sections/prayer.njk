@@ -1,0 +1,19 @@
+{% import "macros/ui.njk" as ui %}
+
+{% if digest.prayer_times %}
+{% set p = digest.prayer_times %}
+{% call ui.card("prayer") %}
+
+  {{ ui.heading("prayer_times", digest.hijri | formatHijri) }}
+
+  <div class="grid grid-cols-3 gap-4 md:flex md:justify-between">
+    {{ ui.timeCell("fajr", p.fajr) }}
+    {{ ui.timeCell("sunrise", p.sunrise) }}
+    {{ ui.timeCell("dhuhr", p.dhuhr) }}
+    {{ ui.timeCell("asr", p.asr) }}
+    {{ ui.timeCell("maghrib", p.maghrib) }}
+    {{ ui.timeCell("isha", p.isha) }}
+  </div>
+
+{% endcall %}
+{% endif %}

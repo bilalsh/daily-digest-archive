@@ -1,0 +1,99 @@
+{# ---------------------------------------------------------------------------
+   Shared UI macros. Every repeated piece of chrome lives here exactly once,
+   so a change to card padding or pill shape is a one-line edit.
+   Import with:  {% import "macros/ui.njk" as ui %}
+--------------------------------------------------------------------------- #}
+
+{# A section card. Used with {% call %} so the body stays in the caller:
+   {% call ui.card("psx") %} ...content... {% endcall %} #}
+{% macro card(id) %}
+<section{% if id %} id="{{ id }}"{% endif %} class="scroll-mt-4 rounded-lg border border-zinc-800 bg-zinc-900 p-4 md:p-6">
+  {{ caller() }}
+</section>
+{% endmacro %}
+
+{# Section title with an optional right-aligned meta string. #}
+{% macro heading(title, meta) %}
+<div class="mb-4 flex items-baseline gap-2">
+  <h2 class="text-sm font-semibold text-teal-300">{{ title }}</h2>
+  {% if meta %}<span class="ml-auto text-xs text-zinc-500">{{ meta }}</span>{% endif %}
+</div>
+{% endmacro %}
+
+{# Label over value, with an optional coloured sub-label (UV / AQI category). #}
+{% macro stat(label, value, sub, subClass) %}
+<div class="flex flex-col gap-1">
+  <span class="text-xs text-zinc-500">{{ label }}</span>
+  <span class="text-sm font-semibold">{{ value }}{% if sub %} <span class="text-xs font-medium {{ subClass | default("text-zinc-500") }}">{{ sub }}</span>{% endif %}</span>
+</div>
+{% endmacro %}
+
+{# Centred label/value pair, for the prayer-time strip. #}
+{% macro timeCell(label, value) %}
+<div class="flex flex-col items-center gap-1 text-center">
+  <span class="text-xs text-zinc-500">{{ label }}</span>
+  <span class="text-sm font-semibold">{{ value }}</span>
+</div>
+{% endmacro %}
+
+{# Signed-change pill. Colour is decided by the pillClass filter. #}
+{% macro pill(value, suffix) %}<span class="{{ value | pillClass }}">{{ value | formatSigned }}{{ suffix }}</span>{% endmacro %}
+
+{# One row of a divided list (fx rates, fuel prices). #}
+{% macro dataRow(label, value, meta, change, changeSuffix) %}
+<div class="flex items-center justify-between gap-4 py-2 first:pt-0 last:pb-0">
+  <span class="flex flex-col">
+    <strong class="text-sm font-semibold">{{ label }}</strong>
+    {% if meta %}<span class="text-xs text-zinc-500">{{ meta }}</span>{% endif %}
+  </span>
+  <span class="flex items-center gap-3">
+    <strong class="text-sm font-semibold">{{ value }}</strong>
+    {% if change or change == 0 %}{{ pill(change, changeSuffix) }}{% endif %}
+  </span>
+</div>
+{% endmacro %}
+
+{# Headline index row — larger than a table row, ruled off from the list below. #}
+{% macro indexRow(label, value, change) %}
+<div class="mb-4 flex items-baseline justify-between gap-4 border-b border-zinc-800 pb-4">
+  <strong class="text-xl font-semibold">{{ label }}</strong>
+  <span class="flex items-baseline gap-3">
+    <strong class="text-xl font-semibold md:text-2xl">{{ value }}</strong>
+    {{ pill(change, "%") }}
+  </span>
+</div>
+{% endmacro %}
+
+{# One row of the PSX table. #}
+{% macro stockRow(symbol, stock) %}
+<div class="flex items-center justify-between gap-3 py-2 first:pt-0 last:pb-0">
+  <span class="flex flex-col">
+    <strong class="text-sm font-semibold">{{ symbol }}</strong>
+    <span class="text-xs text-zinc-500">vol {{ stock.volume | formatVolume }}</span>
+  </span>
+  <span class="flex items-center gap-3">
+    <span class="text-sm">{{ stock.close | formatNumber }}</span>
+    <span class="min-w-16 text-right">{{ pill(stock.change_percent, "%") }}</span>
+  </span>
+</div>
+{% endmacro %}
+
+{# Gold / silver ticker card. `rates` is a list of { label, value }. #}
+{% macro ticker(name, place, value, valueLabel, rates) %}
+<section class="rounded-lg border border-zinc-800 bg-zinc-900 p-4 md:p-6">
+  <div class="flex items-baseline justify-between gap-3">
+    <span class="text-sm font-semibold text-teal-300">{{ name }}</span>
+    <span class="text-xs text-zinc-500">{{ place | lower }}</span>
+  </div>
+  <p class="mt-2 text-2xl font-semibold">{{ value }}</p>
+  <p class="mt-1 text-sm text-zinc-500">{{ valueLabel }}</p>
+  <div class="mt-4 flex gap-5 border-t border-zinc-800 pt-4">
+    {% for rate in rates %}
+    <div class="flex flex-col">
+      <span class="text-xs text-zinc-500">{{ rate.label }}</span>
+      <strong class="text-sm font-semibold">{{ rate.value }}</strong>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}

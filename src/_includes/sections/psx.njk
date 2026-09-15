@@ -1,0 +1,23 @@
+{% import "macros/ui.njk" as ui %}
+
+{% if digest.psx %}
+{% call ui.card("psx") %}
+
+  {{ ui.heading("psx.stocks", digest.psx.date | formatDateShort) }}
+
+  {% if digest.psx.kse100 %}
+    {{ ui.indexRow(
+      "KSE100",
+      digest.psx.kse100.level | formatNumber,
+      digest.psx.kse100.change_percent
+    ) }}
+  {% endif %}
+
+  <div class="flex flex-col divide-y divide-zinc-800">
+    {% for symbol, stock in digest.psx.stocks %}
+      {{ ui.stockRow(symbol, stock) }}
+    {% endfor %}
+  </div>
+
+{% endcall %}
+{% endif %}
