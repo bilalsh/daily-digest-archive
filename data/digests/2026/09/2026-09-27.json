@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-27",
+  "commodities": {
+    "gold": {
+      "metal": "gold",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_24k_tola": 444000,
+      "adjustment": -1159,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.09.pathoor.v1",
+      "currency": "PKR",
+      "rate_22k_tola": 407000,
+      "rate_21k_tola": 388500
+    },
+    "silver": {
+      "metal": "silver",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_tola": 6600,
+      "rate_10g": 5659,
+      "adjustment": -90,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR"
+    }
+  },
+  "currencies": {
+    "date": "2026-09-25",
+    "rates": {
+      "AED": 75.4592,
+      "EUR": 315.7427,
+      "GBP": 366.9068,
+      "SAR": 73.8183,
+      "USD": 277.1618
+    }
+  },
+  "prayer_times": {
+    "fajr": "04:31",
+    "sunrise": "05:53",
+    "dhuhr": "11:54",
+    "asr": "16:10",
+    "maghrib": "17:52",
+    "isha": "19:14"
+  },
+  "hijri": {
+    "day": 14,
+    "month_name": "Rabi' al-thani",
+    "year": 1448,
+    "is_ramadan": false
+  },
+  "weather": {
+    "summary": "Mostly sunny",
+    "primary_condition": "Mostly sunny",
+    "significant_weather": null,
+    "temperature_max": 32.6,
+    "temperature_min": 22.5,
+    "apparent_temperature_max": 36.0,
+    "humidity": 58,
+    "wind_speed_max": 7.6,
+    "precipitation_sum": 0.0,
+    "sunrise": "05:52",
+    "sunset": "17:52",
+    "uv_index_max": 6.7,
+    "uv_category": "High",
+    "air_quality": {
+      "aqi": 196,
+      "category": "Unhealthy"
+    }
+  },
+  "fuel": {
+    "petrol": {
+      "price": 391.3,
+      "unit": "litre",
+      "effective_date": "2026-09-26",
+      "change": 2.02
+    },
+    "hsd": {
+      "price": 408.53,
+      "unit": "litre",
+      "effective_date": "2026-09-26",
+      "change": -3.59
+    }
+  },
+  "psx": null,
+  "errors": {
+    "psx": "Data unavailable"
+  }
+}
