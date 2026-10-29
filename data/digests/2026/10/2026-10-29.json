@@ -1,0 +1,361 @@
+{
+  "date": "2026-10-29",
+  "commodities": {
+    "gold": {
+      "metal": "gold",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_24k_tola": 420600,
+      "adjustment": -956,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.09.pathoor.v1",
+      "currency": "PKR",
+      "rate_22k_tola": 385550,
+      "rate_21k_tola": 368025
+    },
+    "silver": {
+      "metal": "silver",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_tola": 5600,
+      "rate_10g": 4801,
+      "adjustment": -14,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR"
+    }
+  },
+  "currencies": {
+    "date": "2026-10-28",
+    "rates": {
+      "AED": 75.3536,
+      "EUR": 307.8553,
+      "GBP": 367.8599,
+      "SAR": 73.7552,
+      "USD": 276.7736
+    }
+  },
+  "prayer_times": {
+    "fajr": "04:54",
+    "sunrise": "06:16",
+    "dhuhr": "11:47",
+    "asr": "15:36",
+    "maghrib": "17:14",
+    "isha": "18:37"
+  },
+  "hijri": {
+    "day": 17,
+    "month_name": "Jumada al-awwal",
+    "year": 1448,
+    "is_ramadan": false
+  },
+  "weather": {
+    "summary": "Mostly sunny",
+    "primary_condition": "Mostly sunny",
+    "significant_weather": null,
+    "temperature_max": 28.1,
+    "temperature_min": 14.4,
+    "apparent_temperature_max": 29.1,
+    "humidity": 52,
+    "wind_speed_max": 7.1,
+    "precipitation_sum": 0.0,
+    "sunrise": "06:16",
+    "sunset": "17:14",
+    "uv_index_max": 5.1,
+    "uv_category": "High",
+    "air_quality": {
+      "aqi": 154,
+      "category": "Unhealthy"
+    }
+  },
+  "fuel": {
+    "petrol": {
+      "price": 377.91,
+      "unit": "litre",
+      "effective_date": "2026-10-29",
+      "change": 1.85
+    },
+    "hsd": {
+      "price": 399.82,
+      "unit": "litre",
+      "effective_date": "2026-10-29",
+      "change": 1.75
+    }
+  },
+  "psx": {
+    "date": "2026-10-28",
+    "kse100": {
+      "level": 165736.75,
+      "change": 1269.55,
+      "change_percent": 0.77,
+      "date": "2026-10-28"
+    },
+    "stocks": {
+      "OGDC": {
+        "symbol": "OGDC",
+        "previous_close": 302.46,
+        "open": 302.46,
+        "high": 305.78,
+        "low": 301.5,
+        "close": 303.68,
+        "change": 1.22,
+        "change_percent": 0.4,
+        "volume": 2172474
+      },
+      "PPL": {
+        "symbol": "PPL",
+        "previous_close": 215.27,
+        "open": 215.75,
+        "high": 216.75,
+        "low": 213.8,
+        "close": 215.08,
+        "change": -0.19,
+        "change_percent": -0.09,
+        "volume": 1689116
+      },
+      "MEBL": {
+        "symbol": "MEBL",
+        "previous_close": 524.58,
+        "open": 525.1,
+        "high": 527.9,
+        "low": 522.0,
+        "close": 523.76,
+        "change": -0.82,
+        "change_percent": -0.16,
+        "volume": 787597
+      },
+      "HUBC": {
+        "symbol": "HUBC",
+        "previous_close": 188.62,
+        "open": 188.97,
+        "high": 195.0,
+        "low": 188.14,
+        "close": 193.18,
+        "change": 4.56,
+        "change_percent": 2.42,
+        "volume": 6804351
+      },
+      "FFC": {
+        "symbol": "FFC",
+        "previous_close": 537.11,
+        "open": 538.5,
+        "high": 553.99,
+        "low": 538.0,
+        "close": 549.1,
+        "change": 11.99,
+        "change_percent": 2.23,
+        "volume": 5891648
+      },
+      "LUCK": {
+        "symbol": "LUCK",
+        "previous_close": 397.4,
+        "open": 398.0,
+        "high": 400.0,
+        "low": 396.0,
+        "close": 398.09,
+        "change": 0.69,
+        "change_percent": 0.17,
+        "volume": 945485
+      },
+      "BOP": {
+        "symbol": "BOP",
+        "previous_close": 27.51,
+        "open": 27.75,
+        "high": 29.18,
+        "low": 27.5,
+        "close": 28.65,
+        "change": 1.14,
+        "change_percent": 4.14,
+        "volume": 15574248
+      },
+      "EFERT": {
+        "symbol": "EFERT",
+        "previous_close": 192.22,
+        "open": 192.26,
+        "high": 196.0,
+        "low": 192.26,
+        "close": 195.46,
+        "change": 3.24,
+        "change_percent": 1.69,
+        "volume": 2147631
+      },
+      "AIRLINK": {
+        "symbol": "AIRLINK",
+        "previous_close": 117.55,
+        "open": 119.87,
+        "high": 122.99,
+        "low": 115.5,
+        "close": 115.96,
+        "change": -1.59,
+        "change_percent": -1.35,
+        "volume": 2000954
+      },
+      "PSO": {
+        "symbol": "PSO",
+        "previous_close": 355.71,
+        "open": 355.71,
+        "high": 365.0,
+        "low": 355.71,
+        "close": 362.83,
+        "change": 7.12,
+        "change_percent": 2.0,
+        "volume": 2397051
+      },
+      "SYS": {
+        "symbol": "SYS",
+        "previous_close": 110.25,
+        "open": 110.25,
+        "high": 111.3,
+        "low": 108.5,
+        "close": 109.22,
+        "change": -1.03,
+        "change_percent": -0.93,
+        "volume": 1049922
+      },
+      "SAZEW": {
+        "symbol": "SAZEW",
+        "previous_close": 1388.71,
+        "open": 1388.71,
+        "high": 1475.0,
+        "low": 1388.71,
+        "close": 1453.26,
+        "change": 64.55,
+        "change_percent": 4.65,
+        "volume": 547744
+      },
+      "MARI": {
+        "symbol": "MARI",
+        "previous_close": 634.03,
+        "open": 634.0,
+        "high": 636.0,
+        "low": 627.86,
+        "close": 629.73,
+        "change": -4.3,
+        "change_percent": -0.68,
+        "volume": 239389
+      },
+      "ILP": {
+        "symbol": "ILP",
+        "previous_close": 91.26,
+        "open": 91.26,
+        "high": 94.67,
+        "low": 90.96,
+        "close": 93.2,
+        "change": 1.94,
+        "change_percent": 2.13,
+        "volume": 571877
+      },
+      "ISL": {
+        "symbol": "ISL",
+        "previous_close": 74.72,
+        "open": 75.0,
+        "high": 76.1,
+        "low": 75.0,
+        "close": 75.78,
+        "change": 1.06,
+        "change_percent": 1.42,
+        "volume": 66634
+      },
+      "FABL": {
+        "symbol": "FABL",
+        "previous_close": 90.7,
+        "open": 91.0,
+        "high": 91.8,
+        "low": 90.7,
+        "close": 91.19,
+        "change": 0.49,
+        "change_percent": 0.54,
+        "volume": 203189
+      },
+      "MTL": {
+        "symbol": "MTL",
+        "previous_close": 280.82,
+        "open": 281.69,
+        "high": 283.73,
+        "low": 281.69,
+        "close": 282.99,
+        "change": 2.17,
+        "change_percent": 0.77,
+        "volume": 66194
+      },
+      "SNGP": {
+        "symbol": "SNGP",
+        "previous_close": 90.2,
+        "open": 90.49,
+        "high": 90.5,
+        "low": 89.25,
+        "close": 89.66,
+        "change": -0.54,
+        "change_percent": -0.6,
+        "volume": 503079
+      },
+      "DCR": {
+        "symbol": "DCR",
+        "previous_close": 38.76,
+        "open": 38.95,
+        "high": 39.4,
+        "low": 38.18,
+        "close": 39.19,
+        "change": 0.43,
+        "change_percent": 1.11,
+        "volume": 231186
+      },
+      "HINOON": {
+        "symbol": "HINOON",
+        "previous_close": 921.26,
+        "open": 924.99,
+        "high": 925.0,
+        "low": 915.0,
+        "close": 918.83,
+        "change": -2.43,
+        "change_percent": -0.26,
+        "volume": 13483
+      },
+      "ABOT": {
+        "symbol": "ABOT",
+        "previous_close": 967.16,
+        "open": 977.0,
+        "high": 977.0,
+        "low": 957.01,
+        "close": 960.74,
+        "change": -6.42,
+        "change_percent": -0.66,
+        "volume": 9272
+      },
+      "HALEON": {
+        "symbol": "HALEON",
+        "previous_close": 661.68,
+        "open": 661.6,
+        "high": 661.68,
+        "low": 655.11,
+        "close": 658.64,
+        "change": -3.04,
+        "change_percent": -0.46,
+        "volume": 12915
+      },
+      "FEROZ": {
+        "symbol": "FEROZ",
+        "previous_close": 324.83,
+        "open": 324.0,
+        "high": 343.0,
+        "low": 320.01,
+        "close": 337.68,
+        "change": 12.85,
+        "change_percent": 3.96,
+        "volume": 15382
+      },
+      "GHNI": {
+        "symbol": "GHNI",
+        "previous_close": 1061.16,
+        "open": 1085.0,
+        "high": 1167.28,
+        "low": 1085.0,
+        "close": 1167.28,
+        "change": 106.12,
+        "change_percent": 10.0,
+        "volume": 470947
+      }
+    }
+  },
+  "errors": {}
+}
