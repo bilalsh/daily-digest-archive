@@ -1,0 +1,345 @@
+{
+  "date": "2026-11-13",
+  "commodities": {
+    "gold": {
+      "metal": "gold",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_24k_tola": 402200,
+      "adjustment": -1036,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.09.pathoor.v1",
+      "currency": "PKR",
+      "rate_22k_tola": 368683,
+      "rate_21k_tola": 351925
+    },
+    "silver": {
+      "metal": "silver",
+      "city": "Sialkot",
+      "slug": "sialkot",
+      "rate_tola": 5200,
+      "rate_10g": 4458,
+      "adjustment": -17,
+      "adjustment_percent": -0.23,
+      "calculation_version": "2026.05.v1",
+      "currency": "PKR"
+    }
+  },
+  "currencies": {
+    "date": "2026-11-12",
+    "rates": {
+      "AED": 75.3141,
+      "EUR": 306.7784,
+      "GBP": 367.094,
+      "SAR": 73.7047,
+      "USD": 276.6137
+    }
+  },
+  "prayer_times": {
+    "fajr": "05:05",
+    "sunrise": "06:29",
+    "dhuhr": "11:47",
+    "asr": "15:25",
+    "maghrib": "17:03",
+    "isha": "18:27"
+  },
+  "hijri": {
+    "day": 2,
+    "month_name": "Jumada al-thani",
+    "year": 1448,
+    "is_ramadan": false
+  },
+  "weather": null,
+  "fuel": {
+    "petrol": {
+      "price": 332,
+      "unit": "litre",
+      "effective_date": "2026-11-13",
+      "change": -3
+    },
+    "hsd": {
+      "price": 360,
+      "unit": "litre",
+      "effective_date": "2026-11-13",
+      "change": -4
+    }
+  },
+  "psx": {
+    "date": "2026-11-12",
+    "kse100": {
+      "level": 177373.76,
+      "change": -1710.04,
+      "change_percent": -0.95,
+      "date": "2026-11-12"
+    },
+    "stocks": {
+      "OGDC": {
+        "symbol": "OGDC",
+        "previous_close": 316.09,
+        "open": 316.44,
+        "high": 318.45,
+        "low": 313.0,
+        "close": 313.39,
+        "change": -2.7,
+        "change_percent": -0.85,
+        "volume": 1773101
+      },
+      "PPL": {
+        "symbol": "PPL",
+        "previous_close": 225.35,
+        "open": 226.0,
+        "high": 226.8,
+        "low": 221.01,
+        "close": 221.81,
+        "change": -3.54,
+        "change_percent": -1.57,
+        "volume": 2777869
+      },
+      "MEBL": {
+        "symbol": "MEBL",
+        "previous_close": 563.92,
+        "open": 563.92,
+        "high": 571.5,
+        "low": 555.9,
+        "close": 558.18,
+        "change": -5.74,
+        "change_percent": -1.02,
+        "volume": 792070
+      },
+      "HUBC": {
+        "symbol": "HUBC",
+        "previous_close": 208.98,
+        "open": 209.0,
+        "high": 210.0,
+        "low": 204.7,
+        "close": 205.33,
+        "change": -3.65,
+        "change_percent": -1.75,
+        "volume": 2129328
+      },
+      "FFC": {
+        "symbol": "FFC",
+        "previous_close": 574.04,
+        "open": 575.0,
+        "high": 577.9,
+        "low": 566.66,
+        "close": 570.19,
+        "change": -3.85,
+        "change_percent": -0.67,
+        "volume": 1092041
+      },
+      "LUCK": {
+        "symbol": "LUCK",
+        "previous_close": 445.06,
+        "open": 450.0,
+        "high": 450.0,
+        "low": 435.2,
+        "close": 436.38,
+        "change": -8.68,
+        "change_percent": -1.95,
+        "volume": 1243602
+      },
+      "BOP": {
+        "symbol": "BOP",
+        "previous_close": 31.62,
+        "open": 31.71,
+        "high": 32.05,
+        "low": 31.1,
+        "close": 31.23,
+        "change": -0.39,
+        "change_percent": -1.23,
+        "volume": 20558575
+      },
+      "EFERT": {
+        "symbol": "EFERT",
+        "previous_close": 210.88,
+        "open": 211.01,
+        "high": 214.42,
+        "low": 209.0,
+        "close": 210.17,
+        "change": -0.71,
+        "change_percent": -0.34,
+        "volume": 2177389
+      },
+      "AIRLINK": {
+        "symbol": "AIRLINK",
+        "previous_close": 114.99,
+        "open": 115.0,
+        "high": 116.74,
+        "low": 113.5,
+        "close": 114.01,
+        "change": -0.98,
+        "change_percent": -0.85,
+        "volume": 628344
+      },
+      "PSO": {
+        "symbol": "PSO",
+        "previous_close": 374.68,
+        "open": 376.9,
+        "high": 378.9,
+        "low": 365.68,
+        "close": 368.25,
+        "change": -6.43,
+        "change_percent": -1.72,
+        "volume": 4808380
+      },
+      "SYS": {
+        "symbol": "SYS",
+        "previous_close": 119.48,
+        "open": 119.5,
+        "high": 120.0,
+        "low": 116.06,
+        "close": 116.3,
+        "change": -3.18,
+        "change_percent": -2.66,
+        "volume": 2170850
+      },
+      "SAZEW": {
+        "symbol": "SAZEW",
+        "previous_close": 1502.74,
+        "open": 1508.0,
+        "high": 1530.0,
+        "low": 1495.0,
+        "close": 1502.1,
+        "change": -0.64,
+        "change_percent": -0.04,
+        "volume": 367500
+      },
+      "MARI": {
+        "symbol": "MARI",
+        "previous_close": 663.86,
+        "open": 664.0,
+        "high": 686.84,
+        "low": 664.0,
+        "close": 680.06,
+        "change": 16.2,
+        "change_percent": 2.44,
+        "volume": 4382095
+      },
+      "ILP": {
+        "symbol": "ILP",
+        "previous_close": 104.34,
+        "open": 104.38,
+        "high": 104.99,
+        "low": 101.01,
+        "close": 101.58,
+        "change": -2.76,
+        "change_percent": -2.65,
+        "volume": 376497
+      },
+      "ISL": {
+        "symbol": "ISL",
+        "previous_close": 84.17,
+        "open": 84.17,
+        "high": 84.99,
+        "low": 82.02,
+        "close": 82.79,
+        "change": -1.38,
+        "change_percent": -1.64,
+        "volume": 116890
+      },
+      "FABL": {
+        "symbol": "FABL",
+        "previous_close": 96.65,
+        "open": 96.66,
+        "high": 97.4,
+        "low": 95.5,
+        "close": 95.99,
+        "change": -0.66,
+        "change_percent": -0.68,
+        "volume": 712665
+      },
+      "MTL": {
+        "symbol": "MTL",
+        "previous_close": 297.59,
+        "open": 298.0,
+        "high": 305.97,
+        "low": 296.03,
+        "close": 302.11,
+        "change": 4.52,
+        "change_percent": 1.52,
+        "volume": 601654
+      },
+      "SNGP": {
+        "symbol": "SNGP",
+        "previous_close": 94.73,
+        "open": 95.45,
+        "high": 95.5,
+        "low": 93.03,
+        "close": 93.68,
+        "change": -1.05,
+        "change_percent": -1.11,
+        "volume": 2776480
+      },
+      "DCR": {
+        "symbol": "DCR",
+        "previous_close": 39.28,
+        "open": 39.28,
+        "high": 39.37,
+        "low": 39.03,
+        "close": 39.17,
+        "change": -0.11,
+        "change_percent": -0.28,
+        "volume": 186292
+      },
+      "HINOON": {
+        "symbol": "HINOON",
+        "previous_close": 968.51,
+        "open": 968.51,
+        "high": 977.0,
+        "low": 947.65,
+        "close": 956.12,
+        "change": -12.39,
+        "change_percent": -1.28,
+        "volume": 9987
+      },
+      "ABOT": {
+        "symbol": "ABOT",
+        "previous_close": 1006.16,
+        "open": 1010.0,
+        "high": 1010.0,
+        "low": 990.03,
+        "close": 994.79,
+        "change": -11.37,
+        "change_percent": -1.13,
+        "volume": 9607
+      },
+      "HALEON": {
+        "symbol": "HALEON",
+        "previous_close": 699.88,
+        "open": 700.0,
+        "high": 709.0,
+        "low": 695.0,
+        "close": 695.99,
+        "change": -3.89,
+        "change_percent": -0.56,
+        "volume": 20477
+      },
+      "FEROZ": {
+        "symbol": "FEROZ",
+        "previous_close": 364.87,
+        "open": 364.01,
+        "high": 370.8,
+        "low": 360.0,
+        "close": 367.96,
+        "change": 3.09,
+        "change_percent": 0.85,
+        "volume": 6835
+      },
+      "GHNI": {
+        "symbol": "GHNI",
+        "previous_close": 1251.54,
+        "open": 1260.0,
+        "high": 1298.0,
+        "low": 1260.0,
+        "close": 1287.18,
+        "change": 35.64,
+        "change_percent": 2.85,
+        "volume": 347968
+      }
+    }
+  },
+  "errors": {
+    "weather": "Data unavailable"
+  }
+}
