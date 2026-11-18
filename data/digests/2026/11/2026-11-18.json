@@ -5,13 +5,13 @@
       "metal": "gold",
       "city": "Sialkot",
       "slug": "sialkot",
-      "rate_24k_tola": 398600,
-      "adjustment": -1046,
+      "rate_24k_tola": 392200,
+      "adjustment": -995,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.09.pathoor.v1",
       "currency": "PKR",
-      "rate_22k_tola": 365383,
-      "rate_21k_tola": 348775
+      "rate_22k_tola": 359517,
+      "rate_21k_tola": 343175
     },
     "silver": {
       "metal": "silver",
@@ -19,7 +19,7 @@
       "slug": "sialkot",
       "rate_tola": 4800,
       "rate_10g": 4115,
-      "adjustment": -116,
+      "adjustment": 31,
       "adjustment_percent": -0.23,
       "calculation_version": "2026.05.v1",
       "currency": "PKR"
@@ -53,10 +53,10 @@
     "summary": "Mostly sunny",
     "primary_condition": "Mostly sunny",
     "significant_weather": null,
-    "temperature_max": 24.0,
-    "temperature_min": 11.7,
-    "apparent_temperature_max": 22.7,
-    "humidity": 55,
+    "temperature_max": 23.8,
+    "temperature_min": 11.9,
+    "apparent_temperature_max": 22.8,
+    "humidity": 57,
     "wind_speed_max": 9.0,
     "precipitation_sum": 0.0,
     "sunrise": "06:33",
@@ -86,8 +86,8 @@
     "date": "2026-11-17",
     "kse100": {
       "level": 177517.73,
-      "change": -665.22,
-      "change_percent": -0.37,
+      "change": 0.0,
+      "change_percent": 0.0,
       "date": "2026-11-17"
     },
     "stocks": {
